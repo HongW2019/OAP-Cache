@@ -255,7 +255,7 @@ Install `numactl` to bind the executor to the PMem device on the same NUMA node.
    ```yum install numactl -y ```
 
 We recommend you use NUMA-patched Spark to achieve better performance gain for the `external` strategy compared with Community Spark.  
-Build Spark from source to enable NUMA-binding support, refer to [Enabling-NUMA-binding-for-PMem-in-Spark](./Developer-Guide.md#Enabling-NUMA-binding-for-PMem-in-Spark). 
+Build Spark from source to enable NUMA-binding support, refer to [Enabling-NUMA-binding-for-PMem-in-Spark](./Developer-Guide.md#enabling-numa-binding-for-pmem-in-spark). 
 
 #### Configuration for enabling PMem cache
 
@@ -441,20 +441,20 @@ And the Spark webUI OAP tab has more specific OAP cache metrics just as [section
 
 ## Advanced Configuration
 
-- [Additional Cache Strategies](./Advanced-Configuration.md#Additional-Cache-Strategies)  
+- [Additional Cache Strategies](./Advanced-Configuration.md#additional-cache-strategies)  
 
   In addition to **external** cache strategy, SQL Data Source Cache also supports 3 other cache strategies: **guava**, **noevict**  and **vmemcache**.
-- [Index and Data Cache Separation](./Advanced-Configuration.md#Index-and-Data-Cache-Separation) 
+- [Index and Data Cache Separation](./Advanced-Configuration.md#index-and-data-cache-separation) 
 
   To optimize the cache media utilization, SQL Data Source Cache supports cache separation of data and index, by using same or different cache media with DRAM and PMem.
-- [Cache Hot Tables](./Advanced-Configuration.md#Cache-Hot-Tables) 
+- [Cache Hot Tables](./Advanced-Configuration.md#cache-hot-tables) 
 
   Data Source Cache also supports caching specific tables according to actual situations, these tables are usually hot tables.
-- [Column Vector Cache](./Advanced-Configuration.md#Column-Vector-Cache) 
+- [Column Vector Cache](./Advanced-Configuration.md#column-vector-cache) 
 
   This document above uses **binary** cache as example for Parquet file format, if your cluster memory resources is abundant enough, you can choose ColumnVector data cache instead of binary cache for Parquet to spare computation time.
-- [Large Scale and Heterogeneous Cluster Support](./Advanced-Configuration.md#Large-Scale-and-Heterogeneous-Cluster-Support) 
+- [Large Scale and Heterogeneous Cluster Support](./Advanced-Configuration.md#large-scale-and-heterogeneous-cluster-support) 
   
   Introduce an external database to store cache locality info to support large-scale and heterogeneous clusters.
 
-For more information and configuration details, please refer to [Advanced Configuration](Advanced-Configuration.md).
+For more information and configuration details, please refer to [Advanced Configuration](advanced-configuration.md).

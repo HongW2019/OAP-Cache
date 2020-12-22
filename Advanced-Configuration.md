@@ -4,11 +4,11 @@ In addition to usage information provided in [User Guide](User-Guide.md), we pro
 
 Their needed dependencies like ***Memkind*** ,***Vmemcache*** and ***Plasma*** can be automatically installed when following [OAP Installation Guide](../../../docs/OAP-Installation-Guide.md), corresponding feature jars can be found under `$HOME/miniconda2/envs/oapenv/oap_jars`.
 
-- [Additional Cache Strategies](#Additional-Cache-Strategies)  In addition to **external** cache strategy, SQL Data Source Cache also supports 3 other cache strategies: **guava**, **noevict**  and **vmemcache**.
-- [Index and Data Cache Separation](#Index-and-Data-Cache-Separation)  To optimize the cache media utilization, SQL Data Source Cache supports cache separation of data and index, by using same or different cache media with DRAM and PMem.
-- [Cache Hot Tables](#Cache-Hot-Tables)  Data Source Cache also supports caching specific tables according to actual situations, these tables are usually hot tables.
-- [Column Vector Cache](#Column-Vector-Cache)  This document above uses **binary** cache as example for Parquet file format, if your cluster memory resources is abundant enough, you can choose ColumnVector data cache instead of binary cache for Parquet to spare computation time.
-- [Large Scale and Heterogeneous Cluster Support](#Large-Scale-and-Heterogeneous-Cluster-Support) Introduce an external database to store cache locality info to support large-scale and heterogeneous clusters.
+- [Additional Cache Strategies](#ddditional-cache-strategies)  In addition to **external** cache strategy, SQL Data Source Cache also supports 3 other cache strategies: **guava**, **noevict**  and **vmemcache**.
+- [Index and Data Cache Separation](#index-and-data-cache-separation)  To optimize the cache media utilization, SQL Data Source Cache supports cache separation of data and index, by using same or different cache media with DRAM and PMem.
+- [Cache Hot Tables](#cache-hot-tables)  Data Source Cache also supports caching specific tables according to actual situations, these tables are usually hot tables.
+- [Column Vector Cache](#column-vector-cache)  This document above uses **binary** cache as example for Parquet file format, if your cluster memory resources is abundant enough, you can choose ColumnVector data cache instead of binary cache for Parquet to spare computation time.
+- [Large Scale and Heterogeneous Cluster Support](#large-scale-and-heterogeneous-cluster-support) Introduce an external database to store cache locality info to support large-scale and heterogeneous clusters.
 
 ## Additional Cache Strategies
 
@@ -227,7 +227,7 @@ spark.sql.oap.mix.data.cache.backend                    external
 spark.sql.oap.mix.index.cache.backend                   external
 
 ```
-The rest configurations can refer to the configurations of [PMem Cache](./User-Guide.md#use-pmem-cache) and  [External cache](./User-Guide.md#Configuration-for-enabling-PMem-cache)
+The rest configurations can refer to the configurations of [PMem Cache](./User-Guide.md#use-pmem-cache) and  [External cache](./User-Guide.md#configuration-for-enabling-pmem-cache)
 
 3. DRAM(`offheap`)/`guava` as `index` cache media and backend, PMem(`tmp`)/`external` as `data` cache media and backend. 
 

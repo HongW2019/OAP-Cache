@@ -2,9 +2,9 @@
 
 
 * [Introduction](#introduction)
-* [Usage Scenarios](#Usage-Scenarios)
+* [Usage Scenarios](#usage-scenarios)
 * [Architecture](#architecture)
-* [Features](#Features)
+* [Features](#features)
 
 
 
