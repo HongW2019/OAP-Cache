@@ -457,4 +457,4 @@ And the Spark webUI OAP tab has more specific OAP cache metrics just as [section
   
   Introduce an external database to store cache locality info to support large-scale and heterogeneous clusters.
 
-For more information and configuration details, please refer to [Advanced Configuration](advanced-configuration.md).
+For more information and configuration details, please refer to [Advanced Configuration](Advanced-Configuration.md).
